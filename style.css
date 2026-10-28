@@ -121,7 +121,7 @@ h2 { font-size: clamp(36px, 5vw, 64px); line-height: 1.02; letter-spacing: -.03e
 /* ===== Services ===== */
 .band { background: var(--white); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .cards { display: flex; flex-wrap: wrap; gap: 24px; margin-top: 56px; }
-.card { flex: 1 1 260px; min-width: 0; padding: 32px; border: 1px solid var(--line); border-radius: 20px; background: var(--bg); display: flex; flex-direction: column; gap: 16px; }
+.card { flex: 1 1 260px; min-width: 0; padding: 22px; border: 1px solid var(--line); border-radius: 20px; background: var(--bg); display: flex; flex-direction: column; gap: 16px; }
 .card .num { font-family: var(--font-head); font-weight: 700; font-size: 15px; color: var(--accent); }
 .card h3 { font-size: 26px; letter-spacing: -.02em; }
 .card p { font-size: 17px; line-height: 1.55; color: var(--muted); }
