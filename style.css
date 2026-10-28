@@ -151,7 +151,7 @@ h2 { font-size: clamp(36px, 5vw, 64px); line-height: 1.02; letter-spacing: -.03e
 .socials a:hover { color: #B9B7FF; }
 .foot p { color: #A8A8A3; }
 .logo { display: inline-flex; align-items: center; gap: 10px; }
-.logo-img { display: block; width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+.logo-img { display: block; width: 48px; height: 48px; border-radius: 50%; object-fit: cover; }
 
 /* ===== Mobile ===== */
 @media (max-width: 640px) {
