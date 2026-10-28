@@ -169,3 +169,6 @@ h2 { font-size: clamp(36px, 5vw, 64px); line-height: 1.02; letter-spacing: -.03e
   object-fit: cover;
   object-position: top;
 }
+.thumb-3, .thumb-4 { height: auto; aspect-ratio: 16 / 10; }
+  .thumb-3, .thumb-4 { height: auto; }
+.thumb img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
