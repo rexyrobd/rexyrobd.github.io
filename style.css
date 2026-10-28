@@ -45,8 +45,8 @@ h2 { font-size: clamp(36px, 5vw, 64px); line-height: 1.02; letter-spacing: -.03e
 .btn-big { padding: 20px 36px; font-size: 20px; }
 
 /* ===== Nav ===== */
-.nav { padding-top: 28px; padding-bottom: 28px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; }
-.logo { font-family: var(--font-head); font-weight: 700; font-size: 26px; letter-spacing: -.02em; }
+.nav { padding-top: 28px; padding-bottom: 8px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; }
+.logo { font-family: var(--font-head); font-weight: 700; font-size: 32px; letter-spacing: -.02em; }
 .logo span { color: var(--accent); }
 .nav-links { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 32px; font-weight: 500; }
 .nav-links a:not(.btn-dark) { padding: 10px 0; }
