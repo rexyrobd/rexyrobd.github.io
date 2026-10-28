@@ -33,12 +33,12 @@ dd { margin: 0; }
 h2 { font-size: clamp(36px, 5vw, 64px); line-height: 1.02; letter-spacing: -.03em; }
 
 /* ===== Buttons ===== */
-.btn { display: inline-flex; align-items: center; gap: 10px; padding: 18px 30px; border-radius: 999px; font-size: 17px; font-weight: 700; }
+.btn { display: inline-flex; align-items: center; gap: 10px; padding: 18px 30px; border-radius: 12px; font-size: 17px; font-weight: 700; }
 .btn-accent { background: var(--accent); color: var(--white); }
 .btn-accent:hover { color: var(--white); filter: brightness(1.1); }
 .btn-outline { border: 1.5px solid var(--ink); color: var(--ink); }
 .btn-outline:hover { background: var(--ink); color: var(--white); }
-.btn-dark, .btn-dark-solid { background: var(--ink); color: var(--white); border-radius: 999px; }
+.btn-dark, .btn-dark-solid { background: var(--ink); color: var(--white); border-radius: 12px; }
 .btn-dark { padding: 12px 22px; }
 .btn-dark:hover, .btn-dark-solid:hover { color: var(--white); background: var(--accent); }
 .btn-dark-solid { display: inline-flex; align-self: flex-start; padding: 16px 28px; font-size: 16px; font-weight: 700; }
