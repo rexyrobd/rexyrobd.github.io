@@ -181,6 +181,33 @@ h2 { font-size: clamp(36px, 5vw, 64px); line-height: 1.02; letter-spacing: -.03e
 .hero .pill { align-self: center; }
 .hero .lead { margin-left: auto; margin-right: auto; }
 .meta { justify-content: center; text-align: center; }
-.hero-row { flex-direction: column; align-items: center; justify-content: flex-start; gap: 32px; }
-.hero .lead { width: 100%; max-width: 720px; margin-left: auto; margin-right: auto; }
+
+.hero {
+  text-align: center;
+}
+
+.hero .lead {
+  width: 100%;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  line-height: 1.7;
+}
+
+.hero-row {
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 32px;
+}
+
+.hero .pill {
+  align-self: center;
+}
+
+.meta {
+  justify-content: center;
+  text-align: center;
+}
 .hero-row .btn-row { align-self: flex-end; justify-content: flex-end; }
