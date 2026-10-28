@@ -142,12 +142,12 @@ h2 { font-size: clamp(36px, 5vw, 64px); line-height: 1.02; letter-spacing: -.03e
 
 /* ===== Contact ===== */
 .contact { background: var(--ink); color: var(--white); }
-.contact-inner { padding-top: 52px; padding-bottom: 18px; display: flex; flex-direction: column; align-items: flex-start; gap: 22px; }
+.contact-inner { padding-top: 32px; padding-bottom: 8px; display: flex; flex-direction: column; align-items: flex-start; gap: 22px; }
 .contact-inner .eyebrow { margin-bottom: 0; }
 .contact-title { font-size: clamp(32px, 4.5vw, 22px); line-height: .98; letter-spacing: -.035em; max-width: 1000px; }
-.foot { width: 100%; margin-top: 32px; padding-top: 22px; border-top: 1px solid #333; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 20px; }
+.foot { width: 100%; margin-top: 32px; padding-top: 12px; border-top: 1px solid #333; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 20px; }
 .socials { display: flex; flex-wrap: wrap; gap: 8px 32px; }
-.socials a { color: var(--white); padding: 10px 0; }
+.socials a { color: var(--white); padding: 8px 0; }
 .socials a:hover { color: #B9B7FF; }
 .foot p { color: #A8A8A3; }
 .logo { display: inline-flex; align-items: center; gap: 10px; }
