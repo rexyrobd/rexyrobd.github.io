@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ripon — Senior Full-Stack Developer &amp; Designer</title>
+  <meta name="description" content="Ripon is a freelance senior full-stack developer and UI/UX designer based in Dhaka, Bangladesh, working with digital agencies and enterprise clients.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { brand: '#ff2d20' },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-padding-top: 76px; }
+    body { font-family: 'Inter', system-ui, sans-serif; }
+
+    /* Every section: same, small top padding (20px) */
+    .sec { padding-top: 20px; padding-bottom: 64px; }
+
+    /* Headings: 2 balanced lines on mobile, 1 line on desktop */
+    .h-title { font-weight: 800; letter-spacing: -.03em; line-height: 1.15; font-size: clamp(24px, 7vw, 30px); }
+    .h-hero  { font-weight: 800; letter-spacing: -.035em; line-height: 1.12; font-size: clamp(20px, 5.9vw, 30px); }
+    @media (min-width: 768px) {
+      .h-title { font-size: clamp(28px, 3.2vw, 40px); white-space: nowrap; }
+      .h-hero  { font-size: clamp(30px, 3.3vw, 44px); white-space: nowrap; }
+      .br-m { display: none; }
+    }
+
+    .grid-bg {
+      background-image:
+        linear-gradient(to right, rgba(148,163,184,.06) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(148,163,184,.06) 1px, transparent 1px);
+      background-size: 48px 48px;
+      mask-image: radial-gradient(ellipse at 50% 0%, #000 30%, transparent 75%);
+      -webkit-mask-image: radial-gradient(ellipse at 50% 0%, #000 30%, transparent 75%);
+    }
+    .tag { font-family: 'JetBrains Mono', monospace; font-size: 12.5px; }
+    .lift { transition: transform .25s ease, border-color .25s ease; }
+    .lift:hover { transform: translateY(-4px); border-color: rgba(255,45,32,.5); }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .lift, .lift:hover { transition: none; transform: none; } }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-300 antialiased">
+
+  <!-- HEADER -->
+  <header class="sticky top-0 z-50 border-b border-slate-800/80 bg-slate-950/80 backdrop-blur">
+    <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3 md:px-8">
+      <a href="#top" class="flex items-center gap-2.5 text-xl font-extrabold tracking-tight text-white">
+        <img src="logo.png" alt="" class="h-10 w-10 rounded-full object-cover ring-1 ring-slate-700">Rexyro
+      </a>
+      <nav class="hidden items-center gap-7 text-sm font-medium lg:flex" aria-label="Main">
+        <a href="#services" class="transition hover:text-white">Services</a>
+        <a href="#work" class="transition hover:text-white">Case Studies</a>
+        <a href="#stack" class="transition hover:text-white">Tech Stack</a>
+        <a href="#process" class="transition hover:text-white">Agency Workflow</a>
+        <a href="#contact" class="transition hover:text-white">Contact</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <span class="hidden items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1.5 text-xs font-medium text-emerald-300 sm:inline-flex">
+          <span class="relative flex h-2 w-2"><span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"></span><span class="relative inline-flex h-2 w-2 rounded-full bg-emerald-400"></span></span>
+          Live · Available
+        </span>
+        <a href="https://wa.me/8801605321372" target="_blank" rel="noopener" class="rounded-lg bg-brand px-4 py-2 text-sm font-semibold text-white transition hover:brightness-110">Hire Me</a>
+        <button id="menuBtn" class="rounded-lg border border-slate-700 p-2 text-slate-200 lg:hidden" aria-label="Toggle menu" aria-expanded="false"><i data-lucide="menu" class="h-5 w-5"></i></button>
+      </div>
+    </div>
+    <nav id="mobileNav" class="hidden border-t border-slate-800 bg-slate-950 px-5 py-3 text-center text-sm font-medium lg:hidden" aria-label="Mobile">
+      <a href="#services" class="block py-2.5">Services</a>
+      <a href="#work" class="block py-2.5">Case Studies</a>
+      <a href="#stack" class="block py-2.5">Tech Stack</a>
+      <a href="#process" class="block py-2.5">Agency Workflow</a>
+      <a href="#contact" class="block py-2.5">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="sec relative overflow-hidden">
+      <div class="grid-bg pointer-events-none absolute inset-0"></div>
+      <div class="pointer-events-none absolute left-1/2 top-0 h-72 w-[36rem] -translate-x-1/2 rounded-full bg-brand/10 blur-3xl"></div>
+      <div class="relative mx-auto flex max-w-6xl flex-col items-center gap-6 px-5 text-center md:px-8">
+        <p class="tag inline-flex items-center gap-2 rounded-full border border-slate-700 bg-slate-900 px-4 py-2 text-slate-200">
+          <span class="relative flex h-2 w-2"><span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"></span><span class="relative inline-flex h-2 w-2 rounded-full bg-emerald-400"></span></span>
+          Available for Freelance Projects
+        </p>
+        <h1 class="h-hero text-white">Designing Better Websites.<br class="br-m"> Building Better <span class="text-brand">Experiences</span></h1>
+        <p class="max-w-3xl text-base leading-relaxed text-slate-400 md:text-lg">
+          UI/UX Designer &amp; Senior Full-Stack Developer. I design intuitive interfaces in Figma and turn them into fast, accessible, responsive websites — from the first wireframe to the final line of code and deployment. One person. From concept to code. From design to deployment.
+        </p>
+        <div class="flex flex-wrap justify-center gap-3">
+          <a href="#work" class="inline-flex items-center gap-2 rounded-lg bg-brand px-6 py-3.5 font-semibold text-white transition hover:brightness-110">View my work <i data-lucide="arrow-right" class="h-4 w-4"></i></a>
+          <a href="#contact" class="inline-flex items-center gap-2 rounded-lg border border-slate-700 px-6 py-3.5 font-semibold text-white transition hover:border-brand hover:text-brand">Get in touch</a>
+        </div>
+        <dl class="mt-4 grid w-full grid-cols-2 gap-px overflow-hidden rounded-2xl border border-slate-800 bg-slate-800 md:grid-cols-4">
+          <div class="bg-slate-900/80 px-4 py-5"><dt class="tag uppercase tracking-wider text-slate-500">Based in</dt><dd class="mt-1 font-semibold text-white">Dhaka, Bangladesh</dd></div>
+          <div class="bg-slate-900/80 px-4 py-5"><dt class="tag uppercase tracking-wider text-slate-500">Focus</dt><dd class="mt-1 font-semibold text-white">UI/UX · Front · Back · CMS</dd></div>
+          <div class="bg-slate-900/80 px-4 py-5"><dt class="tag uppercase tracking-wider text-slate-500">Experience</dt><dd class="mt-1 font-semibold text-white">10+ years</dd></div>
+          <div class="bg-slate-900/80 px-4 py-5"><dt class="tag uppercase tracking-wider text-slate-500">Languages</dt><dd class="mt-1 font-semibold text-white">Bangla · English</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="sec border-t border-slate-800/70">
+      <div class="mx-auto max-w-6xl px-5 text-center md:px-8">
+        <p class="tag mb-2 uppercase tracking-widest text-brand">// Services</p>
+        <h2 class="h-title text-white">What I Can Do<br class="br-m"> For You</h2>
+        <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <article class="lift rounded-2xl border border-slate-800 bg-slate-900/60 p-6">
+            <div class="mx-auto mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-brand/10 text-brand"><i data-lucide="pen-tool" class="h-5 w-5"></i></div>
+            <h3 class="text-lg font-bold text-white">Website Design</h3>
+            <p class="mt-2 text-sm leading-relaxed text-slate-400">Modern, user-focused designs that combine clean aesthetics, intuitive navigation, and strategic layouts to communicate your brand and goals.</p>
+          </article>
+          <article class="lift rounded-2xl border border-slate-800 bg-slate-900/60 p-6">
+            <div class="mx-auto mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-brand/10 text-brand"><i data-lucide="code-2" class="h-5 w-5"></i></div>
+            <h3 class="text-lg font-bold text-white">Front-End Development</h3>
+            <p class="mt-2 text-sm leading-relaxed text-slate-400">Responsive, pixel-precise websites built with clean, maintainable code across desktop, tablet, and mobile devices.</p>
+          </article>
+          <article class="lift rounded-2xl border border-slate-800 bg-slate-900/60 p-6">
+            <div class="mx-auto mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-brand/10 text-brand"><i data-lucide="shopping-cart" class="h-5 w-5"></i></div>
+            <h3 class="text-lg font-bold text-white">WordPress &amp; E-commerce</h3>
+            <p class="mt-2 text-sm leading-relaxed text-slate-400">Flexible, easy-to-manage WordPress and e-commerce solutions tailored to your business and built for a seamless customer experience.</p>
+          </article>
+          <article class="lift rounded-2xl border border-slate-800 bg-slate-900/60 p-6">
+            <div class="mx-auto mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-brand/10 text-brand"><i data-lucide="gauge" class="h-5 w-5"></i></div>
+            <h3 class="text-lg font-bold text-white">Redesign &amp; Optimization</h3>
+            <p class="mt-2 text-sm leading-relaxed text-slate-400">Turn outdated websites into modern, high-performing experiences with better usability, speed, and SEO fundamentals.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASE STUDIES -->
+    <section id="work" class="sec border-t border-slate-800/70">
+      <div class="mx-auto max-w-6xl px-5 text-center md:px-8">
+        <p class="tag mb-2 uppercase tracking-widest text-brand">// Case Studies</p>
+        <h2 class="h-title text-white">Projects I'm<br class="br-m"> Proud of</h2>
+        <div class="mt-10 grid gap-6 md:grid-cols-2">
+
+          <a href="https://rehab-bd.org/" target="_blank" rel="noopener noreferrer" class="lift group overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/60">
+            <div class="h-56 overflow-hidden bg-slate-800 sm:h-72"><img src="rehab.jpg" alt="REHAB Bangladesh website screenshot" class="h-full w-full object-cover object-top transition duration-500 group-hover:scale-105"></div>
+            <div class="p-6">
+              <p class="tag text-brand">01 · Web design · Development</p>
+              <h3 class="mt-2 text-xl font-bold text-white">REHAB Bangladesh — Website Redesign</h3>
+              <p class="mt-2 text-sm leading-relaxed text-slate-400">A more modern, user-friendly, responsive experience with better content presentation, navigation, and professional online presence.</p>
+            </div>
+          </a>
+
+          <a href="https://www.dreamwayhl.com/" target="_blank" rel="noopener noreferrer" class="lift group overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/60">
+            <div class="h-56 overflow-hidden bg-slate-800 sm:h-72"><img src="dreamway.jpg" alt="Dreamway Holdings Ltd. website screenshot" class="h-full w-full object-cover object-top transition duration-500 group-hover:scale-105"></div>
+            <div class="p-6">
+              <p class="tag text-brand">02 · Web design · Development</p>
+              <h3 class="mt-2 text-xl font-bold text-white">Dreamway Holdings Ltd. — Redesign &amp; Development</h3>
+              <p class="mt-2 text-sm leading-relaxed text-slate-400">A professional, responsive site that showcases real estate projects, strengthens the corporate brand, and helps clients explore properties easily.</p>
+            </div>
+          </a>
+
+          <a href="https://steelsign.com.bd/" target="_blank" rel="noopener noreferrer" class="lift group overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/60">
+            <div class="h-56 overflow-hidden bg-slate-800 sm:h-72"><img src="steelsign.jpg" alt="Steel Sign Holdings Ltd. website screenshot" class="h-full w-full object-cover object-top transition duration-500 group-hover:scale-105"></div>
+            <div class="p-6">
+              <p class="tag text-brand">03 · Full-Stack · WordPress</p>
+              <h3 class="mt-2 text-xl font-bold text-white">Steel Sign Holdings Ltd. — Full-Stack Build</h3>
+              <p class="mt-2 text-sm leading-relaxed text-slate-400">Designed and developed from the ground up — modern UI/UX with responsive development to present products and services on every device.</p>
+            </div>
+          </a>
+
+          <a href="https://jbsholdingsbd.com/" target="_blank" rel="noopener noreferrer" class="lift group overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/60">
+            <div class="h-56 overflow-hidden bg-slate-800 sm:h-72"><img src="jbs.jpg" alt="JBS Holdings Ltd. website screenshot" class="h-full w-full object-cover object-top transition duration-500 group-hover:scale-105"></div>
+            <div class="p-6">
+              <p class="tag text-brand">04 · Full-Stack · WordPress</p>
+              <h3 class="mt-2 text-xl font-bold text-white">JBS Holdings Ltd. — Full-Stack Build</h3>
+              <p class="mt-2 text-sm leading-relaxed text-slate-400">From concept to implementation — a professional, responsive presence reflecting the corporate identity with clear, intuitive browsing.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECH STACK -->
+    <section id="stack" class="sec border-t border-slate-800/70">
+      <div class="mx-auto max-w-6xl px-5 text-center md:px-8">
+        <p class="tag mb-2 uppercase tracking-widest text-brand">// Tech Stack</p>
+        <h2 class="h-title text-white">Tools I Use<br class="br-m"> Every Day</h2>
+        <div class="mt-10 grid gap-5 md:grid-cols-2">
+          <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6">
+            <h3 class="tag mb-4 uppercase tracking-widest text-slate-500">Design</h3>
+            <ul class="flex flex-wrap justify-center gap-2">
+              <li class="tag rounded-md border border-slate-700 bg-slate-950 px-3 py-1.5 text-slate-200">UI/UX design</li>
+              <li class="tag rounded-md border border-slate-700 bg-slate-950 px-3 py-1.5 text-slate-200">Figma</li>
+              <li class="tag rounded-md border border-slate-700 bg-slate-950 px-3 py-1.5 text-slate-200">Wireframing &amp; Prototyping</li>
+              <li class="tag rounded-md border border-slate-700 bg-slate-950 px-3 py-1.5 text-slate-200">Visual Design &amp; Branding</li>
+              <li class="tag rounded-md border border-slate-700 bg-slate-950 px-3 py-1.5 text-slate-200">Adobe XD</li>
+              <li class="tag rounded-md border border-slate-700 bg-slate-950 px-3 py-1.5 text-slate-200">Photoshop</li>
+            </ul>
+          </div>
+          <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6">
+            <h3 class="tag mb-4 uppercase tracking-widest text-slate-500">Development</h3>
+            <ul class="flex flex-wrap justify-center gap-2">
+              <li class="tag rounded-md border border-slate-700 bg-slate-950 px-3 py-1.5 text-brand">HTML5 &amp; CSS3</li>
+              <li class="tag rounded-md border border-slate-700 bg-slate-950 px-3 py-1.5 text-brand">JavaScript</li>
+              <li class="tag rounded-md border border-slate-700 bg-slate-950 px-3 py-1.5 text-brand">React</li>
+              <li class="tag rounded-md border border-slate-700 bg-slate-950 px-3 py-1.5 text-brand">WordPress</li>
+              <li class="tag rounded-md border border-slate-700 bg-slate-950 px-3 py-1.5 text-brand">Responsive Web</li>
+              <li class="tag rounded-md border border-slate-700 bg-slate-950 px-3 py-1.5 text-brand">Performance &amp; SEO</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="sec border-t border-slate-800/70">
+      <div class="mx-auto max-w-6xl px-5 text-center md:px-8">
+        <p class="tag mb-2 uppercase tracking-widest text-brand">// About me</p>
+        <h2 class="h-title text-white">Design Thinking, with<br class="br-m"> a Developer's Discipline</h2>
+        <div class="mt-10 grid items-center gap-10 md:grid-cols-[320px_1fr] md:text-left">
+          <div class="mx-auto w-full max-w-xs overflow-hidden rounded-2xl border border-slate-800 bg-slate-900 md:max-w-none">
+            <img src="myimage.jpg" alt="Ripon, web designer and developer" class="block h-auto w-full">
+          </div>
+          <div class="space-y-4 text-base leading-relaxed text-slate-400">
+            <p>I'm a Web Designer and Developer passionate about creating meaningful digital experiences that combine thoughtful design, intuitive UX, and reliable development — turning complex requirements into modern, responsive, user-friendly websites.</p>
+            <p>My approach goes beyond aesthetics. I focus on business goals, user needs, and brand identity to build solutions that are purposeful, accessible, performance-driven, and built for growth.</p>
+            <p>From UI/UX design and WordPress development to full redesigns and full-stack projects, I cover the entire process: concept, visual direction, development, optimization, and launch.</p>
+            <div class="pt-2 md:text-left">
+              <a href="#" class="inline-flex items-center gap-2 rounded-lg border border-slate-700 px-5 py-3 font-semibold text-white transition hover:border-brand hover:text-brand"><i data-lucide="download" class="h-4 w-4"></i> Download CV</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AGENCY WORKFLOW -->
+    <section id="process" class="sec border-t border-slate-800/70">
+      <div class="mx-auto max-w-6xl px-5 text-center md:px-8">
+        <p class="tag mb-2 uppercase tracking-widest text-brand">// Agency Workflow</p>
+        <h2 class="h-title text-white">From First Idea<br class="br-m"> to Final Launch</h2>
+        <p class="mx-auto mt-3 max-w-xl text-slate-400">A clear, collaborative process built around your goals.</p>
+        <ol class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <li class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6"><span class="tag text-3xl font-bold text-brand">01</span><h3 class="mt-3 text-lg font-bold text-white">Discover</h3><p class="mt-2 text-sm text-slate-400">Strategy, requirements, goals and project scope.</p></li>
+          <li class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6"><span class="tag text-3xl font-bold text-brand">02</span><h3 class="mt-3 text-lg font-bold text-white">Design</h3><p class="mt-2 text-sm text-slate-400">Wireframes, visual direction and design approval.</p></li>
+          <li class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6"><span class="tag text-3xl font-bold text-brand">03</span><h3 class="mt-3 text-lg font-bold text-white">Build</h3><p class="mt-2 text-sm text-slate-400">Development, responsive testing and preview.</p></li>
+          <li class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6"><span class="tag text-3xl font-bold text-brand">04</span><h3 class="mt-3 text-lg font-bold text-white">Launch</h3><p class="mt-2 text-sm text-slate-400">Deployment, optimization and handover.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="sec border-t border-slate-800/70">
+      <div class="mx-auto max-w-6xl px-5 text-center md:px-8">
+        <p class="tag mb-2 uppercase tracking-widest text-brand">// Testimonials</p>
+        <h2 class="h-title text-white">What Clients<br class="br-m"> Say</h2>
+        <div class="mt-10 grid gap-5 md:grid-cols-2">
+          <blockquote class="rounded-2xl border border-slate-800 bg-slate-900/60 p-7">
+            <i data-lucide="quote" class="mx-auto mb-3 h-6 w-6 text-brand"></i>
+            <p class="leading-relaxed text-slate-300">“We appreciate the thoughtful approach to redesigning our website. The improved visual presentation and user-focused layout help communicate our organization’s information more clearly and create a more professional online experience.”</p>
+            <footer class="mt-5 text-sm"><strong class="text-white">REHAB Bangladesh</strong> <span class="tag text-slate-500">· Website Redesign · UI/UX</span></footer>
+          </blockquote>
+          <blockquote class="rounded-2xl border border-slate-800 bg-slate-900/60 p-7">
+            <i data-lucide="quote" class="mx-auto mb-3 h-6 w-6 text-brand"></i>
+            <p class="leading-relaxed text-slate-300">“We are pleased with the overall design and development of our website. A clean, modern interface, responsive layouts, and functional implementation have helped present our business more professionally online.”</p>
+            <footer class="mt-5 text-sm"><strong class="text-white">Steel Sign Holdings Ltd.</strong> <span class="tag text-slate-500">· Full-Stack Design &amp; Dev</span></footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- CONTACT -->
+  <footer id="contact" class="sec border-t border-slate-800 bg-slate-900/50" style="padding-bottom:28px">
+    <div class="mx-auto flex max-w-6xl flex-col items-center gap-5 px-5 text-center md:px-8">
+      <p class="tag uppercase tracking-widest text-brand">// Contact</p>
+      <h2 class="h-title text-white">Let's Build<br class="br-m"> Something Together</h2>
+      <a href="mailto:rexyrobd@gmail.com" class="inline-flex items-center gap-2 rounded-lg bg-brand px-6 py-3.5 text-base font-semibold text-white transition hover:brightness-110 sm:text-lg"><i data-lucide="mail" class="h-5 w-5"></i> rexyrobd@gmail.com</a>
+      <div class="mt-6 flex w-full flex-col items-center justify-between gap-4 border-t border-slate-800 pt-5 text-sm sm:flex-row">
+        <nav class="flex gap-6" aria-label="Social links">
+          <a href="https://www.linkedin.com/in/repon-rexyro/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-slate-300 transition hover:text-brand"><i data-lucide="linkedin" class="h-4 w-4"></i> LinkedIn</a>
+          <a href="https://www.facebook.com/rexyrobd" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-slate-300 transition hover:text-brand"><i data-lucide="facebook" class="h-4 w-4"></i> Facebook</a>
+        </nav>
+        <p class="text-slate-500">© 2026 Rexyro. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    const btn = document.getElementById('menuBtn'), nav = document.getElementById('mobileNav');
+    btn.addEventListener('click', () => {
+      const open = nav.classList.toggle('hidden') === false;
+      btn.setAttribute('aria-expanded', open);
+    });
+    nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => nav.classList.add('hidden')));
+  </script>
+</body>
+</html>
